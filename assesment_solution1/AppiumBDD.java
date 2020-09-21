@@ -62,6 +62,10 @@ public class AppiumBDD {
 
         String totalAmount = projectDriver.findElement(By.className("a-color-price hlb-price a-inline-block a-text-bold")).getText();
         System.out.println("Total Amount for the Book is " + totalAmount);
+        
+      //* Close the Driver*//
+		
+      		projectDriver.close();
     }
 }
 

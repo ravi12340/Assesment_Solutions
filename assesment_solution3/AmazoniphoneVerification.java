@@ -42,6 +42,10 @@ public class AmazoniphoneVerification {
 		log.info("iPro page has been displayed");
 		log.info("Compare Chart has been displayed");
 		
+		//* Close the Driver*//
+		
+  		driver.close();
+		
 	}
 
 }

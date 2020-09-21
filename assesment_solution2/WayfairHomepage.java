@@ -34,6 +34,8 @@ String finalPrice;
 		//*This code will handle the Pop up*//
 		//*driver.findElement(popupDimiss).click();
 		
+		//*Step 3. Select Sectional Furniture *//
+		
 		driver.findElement(furnitureLink).click();
 		driver.findElement(sectionalItem).click();
 		driver.findElement(selectSectionalItem).click();
@@ -50,12 +52,21 @@ String finalPrice;
                  
                     // Switching to Child window
                     driver.switchTo().window(ChildWindow);
+                    //*Step 4. Get the Price of the Item*//
+                    
                     price = driver.findElement(priceofItem).getText();
               		System.out.println("Price of the Item is " +  price);
+              	    //*Step 5. Get the Ratings of the Item*//
+              		
               		ratings = driver.findElement(ratingsofItem).getText();
                     System.out.println("Ratings of your Item is " +  ratings);	
+                    
+                    //*Step 6. Add the item into the Cart*//
                     driver.findElement(addCartbutton).submit();
                   
+                  //* Close the Driver*//
+            		
+              		driver.close();
 	}
 	
         }
